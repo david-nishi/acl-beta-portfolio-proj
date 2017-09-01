@@ -22,3 +22,4 @@ Project.prototype.toHTML = function() {
 
 
 rawProjectData.forEach((projectData) => new Project(projectData));
+
