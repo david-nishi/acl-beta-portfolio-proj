@@ -20,6 +20,14 @@ Project.prototype.toHTML = function() {
   $('main').append(templateFiller(this));
 }
 
+Project.fetchData = function() {
+  $.getJSON('./data/projectData.json')
+    .done(rawData => {
+      console.table(rawData);
+      rawData.projectData.forEach((projectData) => new Project(projectData));
+    })
+    .fail( () => console.log('failed to get .json data'))
+}
 
-rawProjectData.forEach((projectData) => new Project(projectData));
+// rawProjectData.forEach((projectData) => new Project(projectData));
 
