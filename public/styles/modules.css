@@ -1,0 +1,29 @@
+
+.home-container {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 0.6em #b9f2ff;
+  min-width: 14em;
+}
+
+.home-banner {
+  font-family: 'BenchNine', sans-serif;
+  font-size: 34pt;
+  font-weight: normal;
+  color: orangered;
+}
+
+.home-nav li {
+  background: hsla(186, 86%, 50%, 1);
+  border-radius: 0.4em;
+  color: rgb(255, 255, 255);
+  font-family: 'Raleway', sans-serif;
+  font-size: 13pt;
+}  
+
+@media only screen and (min-width: 550px) {
+
+  .home-nav li {
+    background: white;
+    color: hsla(186, 100%, 40%, 1);
+  }
+}

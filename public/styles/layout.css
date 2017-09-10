@@ -1,0 +1,77 @@
+.l-body-home {
+  display: flex;
+}
+
+.l-home {
+  width: 75%;
+  margin: auto auto;
+  box-sizing: border-box;
+  padding: 2em 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.l-home-banner {
+  margin: 0;
+  padding: 0.9em 0.4em;
+}
+
+.home-nav {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
+
+.l-home-nav li {
+  margin: 0.8em 2.5em;
+  padding: 0.8em;
+}
+
+.l-media-query-transition {
+  -moz-transition: 0.8s;
+  -o-transition: 0.8s;
+  -webkit-transition: 0.8s;
+  transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (min-width: 550px) {
+
+  .l-body-home {
+    display: block;
+  }
+
+  .l-home {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  .l-home-banner {
+    width: 8em;
+    margin: 0 auto;
+    border-bottom: 3px double #b9f2ff;
+    padding: 0.8em 0 0.6em 0;
+
+  }
+
+  .l-home-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .l-home-nav li {
+    padding: 2em 1em;
+    margin: 0 0.8em;
+  }
+}
+
+
+@media only screen and (min-width: 900px) {
+
+  .l-home-nav {
+    margin: 0 12%;
+  }
+}
