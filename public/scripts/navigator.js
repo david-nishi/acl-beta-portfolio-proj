@@ -22,8 +22,9 @@ var app = app || {};
 
   Nav.fillBurger = function() {
     let $navBurger = $('#nav-burger');
+    let $navBurgerImageBar = $('.nav-burger-image-bar');
 
-    let $elUl = $(`<ul id='nav-burger-ul'></ul>`)
+    let $elUl = $(`<ul id='nav-burger-ul' class='hidden'></ul>`)
     $navBurger.append($elUl);
 
     Nav.all.forEach(page => {
@@ -32,17 +33,33 @@ var app = app || {};
     });
 
     this.setListener('#nav-burger');
+    $navBurgerImageBar.on('click', function(e) {
+      e.preventDefault();
+
+      $('#nav-burger-ul').toggle();
+      if($navBurger.hasClass('shown')) {
+        $navBurger.removeClass('shown');
+        $navBurgerImageBar.removeClass('shown');
+      }
+      else {
+        $navBurger.addClass('shown');
+        $navBurgerImageBar.addClass('shown');
+      }
+    })
   }
 
   Nav.goTo = function(pageName) {
+    let fadeThru = 400;
+    fadeThru /= 2;
     let $body = $('#body');
-    $body.fadeOut(800, () => {
+
+    $body.fadeOut(fadeThru, () => {
       if($body.children()) $body.empty();
       
       this.insertPage(pageName, () => { app.Nav.setListener('.home-nav-ul') });
+      
 
-
-      $body.fadeIn(800);
+      $body.fadeIn(fadeThru);
     });
 
   }
@@ -67,6 +84,11 @@ var app = app || {};
     $(navName).on('click', 'li', function(e) {
       e.preventDefault();
       Nav.goTo(e.target.id);
+      if(navName === '#nav-burger') {
+        $('#nav-burger-ul').toggle();
+        $('#nav-burger').removeClass('shown');
+        $('.nav-burger-image-bar').removeClass('shown');
+      }
     })
   }
 

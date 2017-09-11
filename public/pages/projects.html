@@ -1,4 +1,19 @@
-<main class='hidden'> 
-
-</main>
-Porject
+<div id='project-container-centerer'>
+  <main id='project-container' class='l-project-container'> 
+      <div id='{{name}}'>
+          <a href='{{url}}'>
+              <img src='{{image}}'/>
+          </a>
+          <div class='info-bar'>
+              <h3>{{name}}</h3>
+              <p class='date'>from {{dates}} to {{dates}}</p>
+              <p class='context'>{{context}}</p>
+              <ul class='technologies'>
+                  {{#each technologies}}
+                  <li>{{this}}</li>
+                  {{/each}}
+              </ul>
+          </div>
+      </div>
+  </main>
+</div>

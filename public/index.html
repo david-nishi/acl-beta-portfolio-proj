@@ -25,13 +25,14 @@
                         {{/each}}
                     </ul>
                 </div>
-
             </div>
         </script>
     </head>
     <body class='l-body-home l-media-query-transition'>
         <nav id='nav-burger' class='hidden l-nav-burger'>
-            <h1>NAV</h1>
+            <div class='nav-burger-image-bar'>
+                <img id='nav-burger-image' class='l-nav-burger-image' src='./assets/menu.svg'></img>
+            </div>
         </nav>
         <div id='body' class='l-body-home l-media-query-transition'>
 
@@ -44,7 +45,8 @@
 <script>
     app.Project.fetchData(() => {});
     app.Nav.fetchAll(() => {
-        app.Nav.insertPage('Home', () => app.Nav.setListener('.home-nav-ul'));
+        // app.Nav.insertPage('Home', () => app.Nav.setListener('.home-nav-ul'));
+        app.Nav.insertPage('Projects');
         app.Nav.fillBurger();
     });
     

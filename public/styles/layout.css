@@ -1,3 +1,7 @@
+
+/******************
+    Home Page
+ ******************/
 .l-body-home {
   display: flex;
 }
@@ -26,6 +30,32 @@
   margin: 0.8em 2.5em;
   padding: 0.8em;
 }
+
+
+/*******************
+    Nav Burger
+ *******************/
+.l-nav-burger {
+  position: fixed;
+  height: fit-content;
+}
+
+
+/********************
+    General
+ ********************/
+
+
+
+/*********************
+    Projects
+ *********************/
+main#project-container {
+  box-sizing: border-box;
+  height: 75%;
+  padding: 2em 0;
+}
+
 
 /* .l-media-query-transition {
   -moz-transition: 0.8s;
