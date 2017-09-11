@@ -1,0 +1,23 @@
+ .hidden {
+  display: none;
+}
+
+.nav-location {
+  background: hsla(186, 71%, 84%, 1) !important;
+  box-sizing: border-box;
+  border: 2px hsla(186, 0%, 93%, 0.5);
+  border-style: groove; 
+}
+
+.nav-burger-image-bar.shown {
+  background: hsla(186, 86%, 50%, 1);
+}
+
+#nav-burger.shown {
+  background: rgb(255, 255, 255);
+}
+
+.l-nav-burger.shown {
+  width: 14em;
+  padding: 0 0 2em 0;
+}

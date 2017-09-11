@@ -1,0 +1,26 @@
+[
+  {
+    "pageName": "Home",
+    "path": "./pages/home.html",
+    "parentEl": "#body",
+    "usesNavBurger": false
+  },
+  {
+    "pageName": "Projects",
+    "path": "./pages/projects.html",
+    "parentEl": "#body",
+    "usesNavBurger": true
+  },
+  {
+    "pageName": "About-Me",
+    "path": "./pages/about_me.html",
+    "parentEl": "#body",
+    "usesNavBurger": true
+  },
+  {
+    "pageName": "Contact",
+    "path": "./pages/contact.html",
+    "parentEl": "#body",
+    "usesNavBurger": true
+  }
+]
