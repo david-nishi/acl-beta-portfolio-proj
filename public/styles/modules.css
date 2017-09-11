@@ -12,7 +12,7 @@
   color: orangered;
 }
 
-.home-nav li {
+.home-nav-ul li {
   background: hsla(186, 86%, 50%, 1);
   border-radius: 0.4em;
   color: rgb(255, 255, 255);
@@ -22,7 +22,7 @@
 
 @media only screen and (min-width: 550px) {
 
-  .home-nav li {
+  .home-nav-ul li {
     background: white;
     color: hsla(186, 100%, 40%, 1);
   }

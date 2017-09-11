@@ -30,9 +30,12 @@
         </script>
     </head>
     <body class='l-body-home l-media-query-transition'>
-        <main class='hidden'> 
+        <nav id='nav-burger' class='hidden l-nav-burger'>
+            <h1>NAV</h1>
+        </nav>
+        <div id='body' class='l-body-home l-media-query-transition'>
 
-        </main>
+        </div>
     </body>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js'></script>
@@ -41,7 +44,8 @@
 <script>
     app.Project.fetchData(() => {});
     app.Nav.fetchAll(() => {
-        app.Nav.insertPage('Home', app.Nav.setListener);
+        app.Nav.insertPage('Home', () => app.Nav.setListener('.home-nav-ul'));
+        app.Nav.fillBurger();
     });
     
 </script>
