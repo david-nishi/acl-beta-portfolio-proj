@@ -3,10 +3,10 @@
     {
       "name": "Beer Buddy",
       "dates": ["8-19-2017", "8-25-2017"],
-      "context": "",
-      "technologies": [],
-      "url": "",
-      "image": ""
+      "context": "Worked as part of a team of four to complete as the final project of the Alchemy Code Lab 201 course.",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "url": "google.com",
+      "image": "https://http.cat/423"
     },
     {
       "name": "Bus Mall",

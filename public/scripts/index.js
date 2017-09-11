@@ -13,9 +13,9 @@ var app = app || {};
     this.technologies = rawData.technologies;   // array of strings
     this.url = rawData.url;
     this.image = rawData.image;
-
-    this.all.push(this);
   }
+
+  Project.all = [];
 
   Project.prototype.toHTML = function() {
     var template = $('#projectTemplate').html();
@@ -23,10 +23,11 @@ var app = app || {};
     $('main').append(templateFiller(this));
   }
 
-  Project.fetchData = function() {
+  Project.fetchData = function(callback) {
     $.getJSON('./data/projectData.json')
       .done(rawData => {
-        rawData.projectData.forEach((projectData) => new Project(projectData));
+        Project.all = rawData.projectData.map(projectData => new Project(projectData));
+        if(callback) callback();
       })
       .fail( () => console.log('failed to get .json data'))
   }

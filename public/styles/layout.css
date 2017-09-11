@@ -27,12 +27,12 @@
   padding: 0.8em;
 }
 
-.l-media-query-transition {
+/* .l-media-query-transition {
   -moz-transition: 0.8s;
   -o-transition: 0.8s;
   -webkit-transition: 0.8s;
   transition: all 0.2s ease-in-out;
-}
+} */
 
 @media only screen and (min-width: 550px) {
 
